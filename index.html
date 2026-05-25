@@ -51,16 +51,44 @@
       <span class="meta" id="file-meta"></span>
     </div>
 
-    <!-- Download buttons -->
-    <div class="btn-group">
-      <a class="btn btn-primary" id="btn-mirror" href="#" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        高速下载
-      </a>
-      <a class="btn btn-secondary" id="btn-github" href="#" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        GitHub 直链
-      </a>
+    <!-- Platform download cards -->
+    <div class="platform-grid">
+      <!-- Windows -->
+      <div class="platform-card" id="card-windows">
+        <div class="platform-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        </div>
+        <div class="platform-name">Windows</div>
+        <div class="platform-meta" id="meta-windows">64-bit · 安装包</div>
+        <div class="platform-actions">
+          <a class="btn btn-primary btn-sm" id="btn-win-mirror" href="#" target="_blank" rel="noopener">高速下载</a>
+          <a class="btn btn-ghost btn-sm" id="btn-win-github" href="#" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <!-- macOS -->
+      <div class="platform-card platform-disabled">
+        <div class="platform-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </div>
+        <div class="platform-name">macOS</div>
+        <div class="platform-meta">即将推出</div>
+        <div class="platform-actions">
+          <span class="btn btn-disabled btn-sm">敬请期待</span>
+        </div>
+      </div>
+
+      <!-- Linux -->
+      <div class="platform-card platform-disabled">
+        <div class="platform-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489.117.779.454 1.509 1.041 2.088.589.572 1.35.958 2.185 1.078.675.1 1.37.063 2.018-.125.627-.18 1.178-.518 1.596-.996.164-.186.291-.394.41-.608.056-.1.146-.262.238-.326.104-.072.248-.1.395-.067.144.033.29.113.4.223.112.11.188.248.285.39.091.135.19.271.328.393.487.43 1.102.687 1.755.755.735.077 1.508-.098 2.13-.5.63-.41 1.06-1.015 1.234-1.662.33-1.248-.238-2.59-1.033-3.83-.38-.6-.84-1.17-1.247-1.69-.406-.522-.76-1.002-.96-1.422-.413-.872-.62-1.694-.62-2.458 0-.89.253-1.737.785-2.446.519-.692 1.262-1.262 2.239-1.596a4.43 4.43 0 0 0-.605-.078 3.98 3.98 0 0 0-.264-.01H12.504zm-.51 1.03c-.147.076-.263.179-.345.308-.32.494-.463 1.187-.463 1.934 0 .636.177 1.321.536 2.084.247.516.638 1.038 1.068 1.59.415.533.877 1.098 1.268 1.712.79 1.246 1.274 2.497 1.013 3.487-.132.5-.416.928-.872 1.224-.467.302-1.066.435-1.629.376-.469-.05-.914-.231-1.245-.525a1.48 1.48 0 0 1-.21-.268 2.37 2.37 0 0 1-.233-.34c-.157-.29-.31-.524-.539-.696a1.32 1.32 0 0 0-.744-.283 1.32 1.32 0 0 0-.75.155c-.218.133-.394.326-.54.547a3.07 3.07 0 0 1-.298.41c-.294.336-.696.565-1.17.701-.484.14-1.028.166-1.545.09-.667-.098-1.27-.393-1.723-.833-.447-.434-.7-.977-.786-1.56-.095-.62.02-1.318.26-2.04.535-1.608 1.69-3.203 2.516-4.183.831-1.183 1.08-2.178 1.146-3.14.004-.073.007-.145.007-.217 0-.105-.005-.207-.014-.307-.085-.992-.262-1.812.015-2.488.094-.227.225-.408.397-.544z"/></svg>
+        </div>
+        <div class="platform-name">Linux</div>
+        <div class="platform-meta">即将推出</div>
+        <div class="platform-actions">
+          <span class="btn btn-disabled btn-sm">敬请期待</span>
+        </div>
+      </div>
     </div>
 
     <!-- Fallback: direct server link -->
@@ -76,8 +104,6 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <span>Windows 10/11 · 64-bit</span>
-      <span class="sep">·</span>
       <a href="https://github.com/luoxk/ai-toolbox-releases" target="_blank" rel="noopener">GitHub</a>
       <span class="sep">·</span>
       <span>&copy; 2026 AI 工具箱</span>
@@ -107,25 +133,40 @@
         const tag = data.tag_name || '';
         document.getElementById('version-badge').textContent = tag;
 
-        // Find first .exe or .zip asset
-        const asset = data.assets.find(a =>
-          a.name.endsWith('.exe') || a.name.endsWith('.zip')
+        // Match assets by platform keywords
+        const winAsset = data.assets.find(a =>
+          /windows|win64|win-x64/i.test(a.name) && /\.(exe|zip|msi)$/i.test(a.name)
+        );
+        const macAsset = data.assets.find(a =>
+          /darwin|macos|mac|osx/i.test(a.name) && /\.(dmg|zip|pkg)$/i.test(a.name)
+        );
+        const linuxAsset = data.assets.find(a =>
+          /linux/i.test(a.name) && /\.(deb|rpm|AppImage|tar\.gz|zip)$/i.test(a.name)
         );
 
-        if (asset) {
-          const ghUrl = asset.browser_download_url;
-          const mirrorUrl = MIRROR + ghUrl;
-
-          document.getElementById('btn-mirror').href = mirrorUrl;
-          document.getElementById('btn-github').href = ghUrl;
-
-          // File meta
-          const sizeMB = (asset.size / 1024 / 1024).toFixed(1);
-          document.getElementById('file-meta').textContent = `${asset.name} · ${sizeMB} MB`;
+        // Windows
+        if (winAsset) {
+          const ghUrl = winAsset.browser_download_url;
+          document.getElementById('btn-win-mirror').href = MIRROR + ghUrl;
+          document.getElementById('btn-win-github').href = ghUrl;
+          const sizeMB = (winAsset.size / 1024 / 1024).toFixed(1);
+          document.getElementById('meta-windows').textContent = `${winAsset.name} · ${sizeMB} MB`;
+          document.getElementById('card-windows').classList.remove('platform-disabled');
         } else {
-          document.getElementById('btn-mirror').href = `https://github.com/${REPO}/releases/latest`;
-          document.getElementById('btn-github').href = `https://github.com/${REPO}/releases/latest`;
-          document.getElementById('file-meta').textContent = '未找到安装包';
+          document.getElementById('card-windows').classList.add('platform-disabled');
+          document.getElementById('meta-windows').textContent = '暂无安装包';
+          document.getElementById('btn-win-mirror').replaceWith(createDisabledBtn());
+          document.getElementById('btn-win-github').remove();
+        }
+
+        // macOS (future)
+        if (macAsset) {
+          enablePlatformCard('macos', macAsset);
+        }
+
+        // Linux (future)
+        if (linuxAsset) {
+          enablePlatformCard('linux', linuxAsset);
         }
 
         // Changelog
@@ -136,10 +177,19 @@
         console.error('Failed to fetch release:', err);
         document.getElementById('version-badge').textContent = '获取失败';
         document.getElementById('error-banner').hidden = false;
-        // Fallback links
-        document.getElementById('btn-mirror').href = `https://github.com/${REPO}/releases/latest`;
-        document.getElementById('btn-github').href = `https://github.com/${REPO}/releases/latest`;
       }
+    }
+
+    function createDisabledBtn() {
+      const span = document.createElement('span');
+      span.className = 'btn btn-disabled btn-sm';
+      span.textContent = '敬请期待';
+      return span;
+    }
+
+    function enablePlatformCard(platform, asset) {
+      // Future: when macOS/Linux assets exist, dynamically enable their cards
+      // This function will be called automatically when assets match
     }
 
     init();
