@@ -119,38 +119,25 @@
   </div>
 
   <script>
-    const REPO = 'luoxk/ai-toolbox-releases';
     const MIRROR = 'https://ghfast.com/';
-    const API = `https://api.github.com/repos/${REPO}/releases/latest`;
+    const DATA_URL = 'latest.json';
 
     async function init() {
       try {
-        const resp = await fetch(API);
+        const resp = await fetch(DATA_URL);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
 
         // Version badge
-        const tag = data.tag_name || '';
-        document.getElementById('version-badge').textContent = tag;
-
-        // Match assets by platform keywords
-        const winAsset = data.assets.find(a =>
-          /windows|win64|win-x64/i.test(a.name) && /\.(exe|zip|msi)$/i.test(a.name)
-        );
-        const macAsset = data.assets.find(a =>
-          /darwin|macos|mac|osx/i.test(a.name) && /\.(dmg|zip|pkg)$/i.test(a.name)
-        );
-        const linuxAsset = data.assets.find(a =>
-          /linux/i.test(a.name) && /\.(deb|rpm|AppImage|tar\.gz|zip)$/i.test(a.name)
-        );
+        document.getElementById('version-badge').textContent = data.version || '';
 
         // Windows
-        if (winAsset) {
-          const ghUrl = winAsset.browser_download_url;
-          document.getElementById('btn-win-mirror').href = MIRROR + ghUrl;
-          document.getElementById('btn-win-github').href = ghUrl;
-          const sizeMB = (winAsset.size / 1024 / 1024).toFixed(1);
-          document.getElementById('meta-windows').textContent = `${winAsset.name} · ${sizeMB} MB`;
+        const win = data.assets && data.assets.windows;
+        if (win && win.url) {
+          document.getElementById('btn-win-mirror').href = MIRROR + win.url;
+          document.getElementById('btn-win-github').href = win.url;
+          const sizeMB = (win.size / 1024 / 1024).toFixed(1);
+          document.getElementById('meta-windows').textContent = `${win.name} · ${sizeMB} MB`;
           document.getElementById('card-windows').classList.remove('platform-disabled');
         } else {
           document.getElementById('card-windows').classList.add('platform-disabled');
@@ -160,24 +147,25 @@
         }
 
         // macOS (future)
-        if (macAsset) {
-          enablePlatformCard('macos', macAsset);
+        const mac = data.assets && data.assets.macos;
+        if (mac && mac.url) {
+          // enablePlatformCard('macos', mac);
         }
 
         // Linux (future)
-        if (linuxAsset) {
-          enablePlatformCard('linux', linuxAsset);
+        const linux = data.assets && data.assets.linux;
+        if (linux && linux.url) {
+          // enablePlatformCard('linux', linux);
         }
 
         // Changelog
-        const body = (data.body || '').trim();
+        const body = (data.changelog || '').trim();
         document.getElementById('changelog-body').textContent = body || '此版本未附带更新说明。';
 
       } catch (err) {
         console.error('Failed to fetch release:', err);
         document.getElementById('version-badge').textContent = '暂无发布';
         document.getElementById('error-banner').hidden = false;
-        // 无 release 时禁用 Windows 卡片
         document.getElementById('card-windows').classList.add('platform-disabled');
         document.getElementById('meta-windows').textContent = '暂无安装包';
         const mirrorBtn = document.getElementById('btn-win-mirror');
@@ -192,11 +180,6 @@
       span.className = 'btn btn-disabled btn-sm';
       span.textContent = '敬请期待';
       return span;
-    }
-
-    function enablePlatformCard(platform, asset) {
-      // Future: when macOS/Linux assets exist, dynamically enable their cards
-      // This function will be called automatically when assets match
     }
 
     init();

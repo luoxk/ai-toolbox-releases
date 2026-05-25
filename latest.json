@@ -1,0 +1,11 @@
+{
+  "version": "v2.1.1",
+  "changelog": "🎨 品牌升级：全新 Claude 星号 App Logo（银白金属质感）\n🪟 窗口体验：启动时动态 clamp 窗口尺寸 + 位置/大小记忆恢复\n🐛 修复连续快速切换 Claude 服务商导致应用 panic 退出\n🐛 修复带图消息 rewind 失败 (expectedContent mismatch)",
+  "assets": {
+    "windows": {
+      "name": "ai-toolbox-v2.1.1-windows-x64-setup.exe",
+      "url": "https://github.com/luoxk/ai-toolbox-releases/releases/download/v2.1.1/ai-toolbox-v2.1.1-windows-x64-setup.exe",
+      "size": 78985087
+    }
+  }
+}
