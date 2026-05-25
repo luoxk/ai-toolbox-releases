@@ -175,8 +175,15 @@
 
       } catch (err) {
         console.error('Failed to fetch release:', err);
-        document.getElementById('version-badge').textContent = '获取失败';
+        document.getElementById('version-badge').textContent = '暂无发布';
         document.getElementById('error-banner').hidden = false;
+        // 无 release 时禁用 Windows 卡片
+        document.getElementById('card-windows').classList.add('platform-disabled');
+        document.getElementById('meta-windows').textContent = '暂无安装包';
+        const mirrorBtn = document.getElementById('btn-win-mirror');
+        const ghBtn = document.getElementById('btn-win-github');
+        if (mirrorBtn) { const d = createDisabledBtn(); mirrorBtn.replaceWith(d); }
+        if (ghBtn) { ghBtn.remove(); }
       }
     }
 
