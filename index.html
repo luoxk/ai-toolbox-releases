@@ -134,8 +134,8 @@
         // Windows
         const win = data.assets && data.assets.windows;
         if (win && win.url) {
-          document.getElementById('btn-win-mirror').href = MIRROR + win.url;
-          document.getElementById('btn-win-github').href = win.url;
+          document.getElementById('btn-win-mirror').href = win.url;
+          document.getElementById('btn-win-github').href = 'https://github.com/luoxk/ai-toolbox-releases/releases/latest';
           const sizeMB = (win.size / 1024 / 1024).toFixed(1);
           document.getElementById('meta-windows').textContent = `${win.name} · ${sizeMB} MB`;
           document.getElementById('card-windows').classList.remove('platform-disabled');
