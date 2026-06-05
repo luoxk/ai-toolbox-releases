@@ -1,11 +1,11 @@
 {
-  "version": "v2.1.1",
-  "changelog": "🎨 品牌升级：全新 Claude 星号 App Logo（银白金属质感）\n🪟 窗口体验：启动时动态 clamp 窗口尺寸 + 位置/大小记忆恢复\n🐛 修复连续快速切换 Claude 服务商导致应用 panic 退出\n🐛 修复带图消息 rewind 失败 (expectedContent mismatch)",
+  "version": "v2.1.2",
+  "changelog": "🎓 学习中心：桌面端视频播放 + 手机扫码播放 + 进度可视化 + 课程购买流程\n🛒 课程购买协议确认 + 支付窗口内嵌轮询自动解锁\n🖥️ 工作区：后台 shell 输出可在侧栏观察 + 窄屏导航布局优化\n🐛 修复上游节点错误时前端无感知（新增 turn 超时兜底，不再无限等待）\n🐛 修复 Windows sidecar 启动失败可诊断化 + 预设切换模型名实时刷新",
   "assets": {
     "windows": {
-      "name": "ai-toolbox-v2.1.1-windows-x64-setup.exe",
-      "url": "https://share.feijipan.com/s/FubBt9fy",
-      "size": 78985087
+      "name": "ai-toolbox-v2.1.2-windows-x64-setup.exe",
+      "url": "https://share.feijipan.com/s/PabkYVrA",
+      "size": 78724543
     }
   }
 }
