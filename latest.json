@@ -1,11 +1,11 @@
 {
-  "version": "v2.1.4",
-  "changelog": "🎓 学习中心入口加入工作区侧栏，课程访问更直接\n🎬 CDN 视频播放恢复保存进度，继续学习不再从头开始\n🧾 课程购买协议确认链路加固，前端保持阅读与勾选约束\n🐛 修复课程购买协议 consent 传递与课程面板状态同步问题",
+  "version": "v2.1.5",
+  "changelog": "🆓 免费课时显示播放按钮和免费标签，试看更直观\n🎬 免费课时支持下一集跳转与播放进度显示\n🧭 学习中心列表页顶部新增返回工作区按钮\n🐛 修复启动会话后从非 home 面板切回工作区不显示新会话的问题",
   "assets": {
     "windows": {
-      "name": "ai-toolbox-v2.1.4-windows-x64-setup.zip",
-      "url": "https://share.feijipan.com/s/2ecM3Vbv",
-      "size": 78530147
+      "name": "ai-toolbox-v2.1.5-windows-x64-setup.zip",
+      "url": "https://share.feijipan.com/s/3tcM7Pjr",
+      "size": 78530400
     }
   }
 }
