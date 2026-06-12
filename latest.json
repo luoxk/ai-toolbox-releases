@@ -1,11 +1,11 @@
 {
-  "version": "v2.1.3",
+  "version": "v2.1.4",
   "changelog": "🎓 学习中心入口加入工作区侧栏，课程访问更直接\n🎬 CDN 视频播放恢复保存进度，继续学习不再从头开始\n🧾 课程购买协议确认链路加固，前端保持阅读与勾选约束\n🐛 修复课程购买协议 consent 传递与课程面板状态同步问题",
   "assets": {
     "windows": {
-      "name": "ai-toolbox-v2.1.3-windows-x64-setup.exe",
-      "url": "https://ruyiagents.com/releases/ai-toolbox-v2.1.3-windows-x64-setup.exe",
-      "size": 78939183
+      "name": "ai-toolbox-v2.1.4-windows-x64-setup.zip",
+      "url": "https://share.feijipan.com/s/2ecM3Vbv",
+      "size": 78530147
     }
   }
 }
