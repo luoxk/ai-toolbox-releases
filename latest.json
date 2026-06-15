@@ -1,11 +1,11 @@
 {
-  "version": "v2.1.5",
-  "changelog": "🆓 免费课时显示播放按钮和免费标签，试看更直观\n🎬 免费课时支持下一集跳转与播放进度显示\n🧭 学习中心列表页顶部新增返回工作区按钮\n🐛 修复启动会话后从非 home 面板切回工作区不显示新会话的问题",
+  "version": "v2.2.0",
+  "changelog": "💬 全新「微信接入」：扫码绑定后，直接用微信和 Claude 会话交互\n📂 微信消息自动进入你指定的默认项目，绑定前需先选定\n⚡ 微信接入完全进程内运行，无需再安装外部 cc-connect 命令行工具\n🧹 工具栏精简：隐藏 NPM 包入口，新增微信接入入口",
   "assets": {
     "windows": {
-      "name": "ai-toolbox-v2.1.5-windows-x64-setup.zip",
-      "url": "https://share.feijipan.com/s/3tcM7Pjr",
-      "size": 78530400
+      "name": "ai-toolbox-v2.2.0-windows-x64-setup.zip",
+      "url": "https://share.feijipan.com/s/Vvc4YlaS",
+      "size": 79619232
     }
   }
 }
